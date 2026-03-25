@@ -1,0 +1,8 @@
+<linker>
+  <assembly fullname="VRM10">
+    <type fullname="UniVRM10.Vrm10" preserve="all" />
+  </assembly>
+  <assembly fullname="UniVRM10">
+    <type fullname="UniVRM10.Vrm10" preserve="all" />
+  </assembly>
+</linker>

@@ -154,3 +154,16 @@ WebGL 页面和 VRM 资源常常不在同一域名，CORS 不正确就会加载�
   - https://github.com/vrm-c/UniVRM/releases
 - VRM 官方文档（英文）：
   - https://vrm.dev/en/univrm/
+
+---
+
+## 10. 如果控制台看不到 `[VrmWebglUrlLoader]` 日志
+
+若你在浏览器控制台只看到 Unity 启动日志，却看不到本脚本日志，优先检查：
+
+1. `VrmWebglUrlLoader` 是否挂在当前启动场景的激活物体上；
+2. `verboseLog` 是否开启；
+3. 访问地址是否带 `?vrm=...`；
+4. 浏览器 Network 面板是否出现 `.vrm` 请求。
+
+如果使用 WebGL + IL2CPP + 反射加载 UniVRM，建议添加 `Assets/link.xml` 防止代码裁剪导致 `UniVRM10.Vrm10` 被移除（本仓库已提供示例）。
